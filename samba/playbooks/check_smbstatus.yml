@@ -4,8 +4,8 @@
   tasks: 
   
   - name: check_smb 
-    ansible.buitin.shell:
-       cmd: sytsemctl status smb 
+    ansible.builtin.shell:
+       cmd: systemctl status smb 
     register: result 
 
 

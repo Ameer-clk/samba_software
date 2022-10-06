@@ -4,7 +4,7 @@
   become_method: yes
   tasks:
 
-  - name: stop smb 
+  - name: stop smb service 
     service: 
       name: smb 
       state: stopped

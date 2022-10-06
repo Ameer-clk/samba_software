@@ -1,0 +1,19 @@
+---
+- hosts: web 
+  become: yes
+  become_method: sudo 
+  tasks: 
+
+  - name: Install samba
+    yum: 
+     name: samba
+     state: latest 
+     update_cache: yes 
+when: ansible_facts['os_family'] == "RHEL"
+
+
+ - name: start smb 
+  service:
+    name: smb 
+    state: started 
+when: ansible_facts['os_family'] == "RHEL"

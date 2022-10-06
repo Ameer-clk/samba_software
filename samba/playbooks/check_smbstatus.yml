@@ -1,0 +1,14 @@
+---
+- name: chech smb status 
+  hosts: web 
+  tasks: 
+  
+  - name: check_smb 
+    ansible.buitin.shell:
+       cmd: sytsemctl status smb 
+    register: result 
+
+
+  - name: Display result 
+    debug: 
+      msg: "{{result.stdout_lines}}"

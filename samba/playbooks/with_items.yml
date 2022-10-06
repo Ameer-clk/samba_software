@@ -1,0 +1,14 @@
+---
+- hosts: web 
+  tasks: 
+  - name: "below are smb conf"
+    debug: 
+      msg: "smb item: {{ item }}"
+  with_items: 
+    - vim /etc/samba/smb.conf 
+    - comment 
+    - path 
+    - public
+    - writable
+    - browsable 
+    

@@ -1,5 +1,5 @@
 ---
-- name: chech smb status 
+- name: check smb status 
   hosts: web 
   tasks: 
   
